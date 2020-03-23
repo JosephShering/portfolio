@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SEO from '../../seo';
+
 import './layout.css';
 
 export default Layout;
@@ -8,6 +10,7 @@ function Layout({
 }) {
     return (
         <div className="layout">
+            <SEO />
             {children}
         </div>
     );
