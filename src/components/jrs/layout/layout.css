@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&display=swap');
+
+.layout {
+    display: grid;
+    grid-template-columns: [page-start] 1fr [content-start] 650px [content-end] 1fr [page-end];
+    grid-auto-rows: 1fr;
+    font-family: 'Fira Mono', monospace;
+    color: #FEFEFE;
+    padding-top: 2rem;
+}
+
+.layout__page {
+    grid-column: page;
+    
+    display: grid;
+    grid-template-columns: [page-start] 1fr [content-start] 650px [content-end] 1fr [page-end];
+    grid-auto-rows: 1fr;
+}
+
+
+.layout__content {
+    grid-column: content;
+}
+
+body {
+    margin: 0;
+    background-color: #2D3748;
+    color: #FEFEFE;
+    min-height: 100vh;
+    font-family: 'Fira Mono', monospace;
+}

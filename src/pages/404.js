@@ -1,14 +1,25 @@
-import React from "react"
+import React from 'react';
+import {Link} from '../components/jrs/link';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import {H1, H2, Text} from '../components/jrs/text';
+import {Layout, Content} from '../components/jrs/layout';
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+    <Layout>
+      <Content>
+        <H1 className="text-center text-orange-500">OOF, 404!</H1>
+        <br /><br />
+        <H2 className="text-center">
+          These are not the droids you are looking for.
+        </H2>
+
+        <br /><br />
+
+        <Text className="text-center">
+          Go back to the <Link to="/">Home Page</Link>!
+        </Text>
+      </Content>
+    </Layout>
 )
 
-export default NotFoundPage
+export default NotFoundPage;
